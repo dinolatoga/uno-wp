@@ -7,10 +7,10 @@
 
 // Register Post Types
 add_action( 'init', 'register_taxonomies' );
-add_action( 'init', 'register_post_type' );
+add_action( 'init', 'register_pt' );
 
 // Post Type
-function register_post_type() {
+function register_pt() {
 	$labels = array(
 		'name' => __('Post Type'),
 		'singular_name' => __('Item'),
