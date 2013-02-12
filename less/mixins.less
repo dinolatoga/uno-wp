@@ -52,16 +52,16 @@
     border-radius: @topleft @topright @bottomright @bottomleft;
 }
 
-.box-shadow (@x: 0px, @y: 0px, @blur: 5px, @alpha: 0.5) {
-    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-    -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-    box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+.box-shadow (@x: 0px, @y: 0px, @blur: 5px, @spread:0, @alpha: 0.5) {
+    -webkit-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
 }
 
-.inset-shadow (@inset: inset, @x: 0, @y: 0, @blur: 5px, @alpha: 0.5) {
-	-webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-    -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-    box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
+.inset-shadow (@inset: inset, @x: 0, @y: 0, @blur: 5px,  @spread:0, @alpha: 0.5) {
+    -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    -moz-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+    box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
 }
 
 .text-shadow (@x: 0, @y: 0, @blur: 1px, @alpha: 0.5) {
