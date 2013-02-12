@@ -42,12 +42,9 @@ add_action('admin_menu', 'remove_menus', 999 );
 
 function remove_submenus() {
   global $submenu;
-  unset($submenu['edit.php?post_type=furniture'][15]);
-  unset($submenu['edit.php?post_type=art'][15]);
-  unset($submenu['edit.php?post_type=accessories'][15]);
-  unset($submenu['edit.php?post_type=press'][15]);
+  unset($submenu['edit.php?post_type=example'][15]);
 }
-add_action('admin_menu', 'remove_submenus', 999);
+//add_action('admin_menu', 'remove_submenus', 999);
 
 add_action( 'wp_before_admin_bar_render', 'wps_admin_bar' );
 function wps_admin_bar() {
@@ -74,17 +71,16 @@ function my_admin_footer_text( $default_text ) {
     return 'Powered by <a href="http://www.wordpress.org">WordPress</a>';
 }
 
+// Setup dashboard widgets
 add_action('wp_dashboard_setup', 'my_dashboard_widgets');
 function my_dashboard_widgets() {
-    wp_add_dashboard_widget( 'dashboard_furniture_feed', 'Recently Added Furnitures', 'dashboard_furniture_feed' );
-    wp_add_dashboard_widget( 'dashboard_art_feed', 'Recently Added Art Items', 'dashboard_art_feed' );
-    wp_add_dashboard_widget( 'dashboard_accessories_feed', 'Recently Added Accessories', 'dashboard_accessories_feed' );
+    wp_add_dashboard_widget( 'dashboard_furniture_feed', 'Example Feed', 'dashboard_example_feed' );
 }
 
-function dashboard_furniture_feed() {
+function dashboard_example_feed() {
      echo '<div class="rss-widget">';
      wp_widget_rss_output(array(
-          'url' => 'http://interior-360.com/wptest/feed/?post_type=furniture',
+          'url' => 'http://wordpress.com/rss',
           'title' => 'Recently Added Furnitures',
           'items' => 5,
           'show_summary' => 0,
@@ -92,35 +88,4 @@ function dashboard_furniture_feed() {
           'show_date' => 1
      ));
      echo "</div>";
-}
-
-function dashboard_art_feed() {
-     echo '<div class="rss-widget">';
-     wp_widget_rss_output(array(
-          'url' => 'http://interior-360.com/wptest/feed/?post_type=art',
-          'title' => 'Recently Added Art Items',
-          'items' => 5,
-          'show_summary' => 0,
-          'show_author' => 0,
-          'show_date' => 1
-     ));
-     echo "</div>";
-}
-
-function dashboard_accessories_feed() {
-     echo '<div class="rss-widget">';
-     wp_widget_rss_output(array(
-          'url' => 'http://interior-360.com/wptest/feed/?post_type=accessories',
-          'title' => 'Recently Added Accessories',
-          'items' => 5,
-          'show_summary' => 0,
-          'show_author' => 0,
-          'show_date' => 1
-     ));
-     echo "</div>";
-}
-
-if ( !current_user_can( 'edit_users' ) ) {
-  add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
-  add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 }
