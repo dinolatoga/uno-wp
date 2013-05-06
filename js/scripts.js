@@ -1,4 +1,4 @@
-// Site Scripts
+/* Site Scripts */
 $(function() {
 
 

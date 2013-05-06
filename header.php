@@ -1,8 +1,8 @@
 <?php
 /**
 * The template for displaying the header.
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 ?>
 <!doctype html>

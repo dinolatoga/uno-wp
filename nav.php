@@ -1,8 +1,8 @@
 <?php
 /**
-* Page Template
-* @package WordPress
-* @subpackage Uno
+* Navigation Section Template
+* @package Uno WP
+*
 */
 ?>
 <nav>

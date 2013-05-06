@@ -1,8 +1,8 @@
 <?php
 /**
 * 404 Page Template
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 get_header(); ?>
 <div class="content">

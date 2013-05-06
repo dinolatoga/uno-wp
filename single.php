@@ -1,8 +1,8 @@
 <?php
 /**
 * Detail Post Template
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 get_header(); ?>
 	<div class="content">

@@ -1,8 +1,8 @@
 <?php
 /**
 * Theme functions
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 
 // include metabox plugin

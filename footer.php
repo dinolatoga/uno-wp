@@ -1,8 +1,8 @@
 <?php
 /**
 * The template for displaying the footer.
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 ?>
 <footer>

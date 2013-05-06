@@ -1,8 +1,8 @@
 <?php
 /**
 * Homepage Template
-* @package WordPress
-* @subpackage Uno
+* @package Uno WP
+*
 */
 ?>
 <?php get_header(); ?>
